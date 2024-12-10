@@ -1,0 +1,16 @@
+-- Group By 
+
+
+Select *
+From employee_demgographics;
+
+Select gender, AVG(age), MAX(age), MIN(age), COUNT(age)
+From employee_demgographics
+GROUP BY gender
+;
+
+-- ORDER BY
+Select *
+From employee_demgographics;
+ORDER BY gender, age 
+;

@@ -1,0 +1,14 @@
+-- Having vs Where
+
+Select gender, AVG(age)
+FROM employee_demographics
+GROUP BY gender
+HAVING AVG(age) > 40
+;
+
+Select occupation, AVG(salary)
+FROM employee_salary;
+WHERE occupation LIKE '%Manager%'
+GROUP BY occupation
+HAVING AVG(SALARY) > 75000
+;
