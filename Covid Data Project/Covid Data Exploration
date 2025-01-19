@@ -1,4 +1,5 @@
-From PortfolioProject…CovidVaccinations
+Select *
+From PortfolioProject…CovidDeaths
 Order by 3, 4
 
 --Select Data that we are going to be using
