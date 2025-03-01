@@ -3,15 +3,9 @@
 SELECT *
 FROM layoffs;
 
--- 1. remove Duplicates
--- 2. Standardize the Data
--- 3. Null Values or blank values
--- 4. Remove Any Columns and rows
 
-
-
---1. Removing Duplicates
-CREATE TABLE layoffs_staging --(want to make duplicate table to keep original dataset)
+--want to create a staging table first, to make duplicate table to keep original dataset
+CREATE TABLE layoffs_staging 
 LIKE layoffs;
 
 
@@ -23,6 +17,13 @@ SELECT *
 FROM layoffs;
 
 
+-- 1. remove Duplicates
+-- 2. Standardize the Data
+-- 3. Null Values or blank values
+-- 4. Remove Any Columns and rows
+
+
+--1. Removing Duplicates
 SELECT *
 ROW_NUMBER() OVER() --to create a new column and check for duplicate rows
 PARTITION BY company, industry, total_laid_off, percentage_laid_off, 'date') as row_num 
