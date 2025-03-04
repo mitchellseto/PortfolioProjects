@@ -2,9 +2,6 @@
 --SKills used: Joins, CTEs, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 
 
---From PortfolioProject..CovidVaccinations
---Order by 3, 4
-
 Select *
 From PortfolioProject..CovidDeaths
 Order by 3, 4
